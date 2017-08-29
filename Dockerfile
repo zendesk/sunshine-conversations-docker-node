@@ -2,14 +2,14 @@
 # Node JS Alpine image
 #
 
-FROM gliderlabs/alpine:3.4
+FROM gliderlabs/alpine:3.6
 
 # Install root filesystem
 ADD ./rootfs /
-RUN echo -ne "Alpine Linux 3.4 image. (`uname -rsv`)\n" >> /root/.built
+RUN echo -ne "Alpine Linux 3.6 image. (`uname -rsv`)\n" >> /root/.built
 
 # Node and NPM version
-ENV NODE_VERSION=6.3.1 NPM_VERSION=3.10.5
+ENV NODE_VERSION=8.4.0 NPM_VERSION=5.3.0
 
 # Install Node and NPM
 RUN apk update && apk-install curl bash tree make gcc g++ python linux-headers paxctl libgcc libstdc++ && \
